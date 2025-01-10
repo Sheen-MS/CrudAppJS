@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+
+<body>
+
+
+
+    <div>
+        <table style="border: solid;">
+            <tr>
+                <td>MobileNo.</td>
+                <td><input type="text" id="t1" disabled></td>
+            </tr>
+            <tr>
+                <td>name</td>
+                <td><input type="text" id="t2" disabled></td>
+            </tr>
+            <tr>
+                <td>email</td>
+                <td><input type="text" id="t3" disabled></td>
+            </tr>
+            <tr>
+                <td>EnterPassword</td>
+                <td><input type="text" id="t4"></td>
+            </tr>
+            <tr>
+                <td>EnterAddress</td>
+                <td><input type="text" id="t5"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="btn1()" value="save"></td>
+            </tr>
+            <tr>
+                <td><input type="button" onclick="view()" value="view"></td>
+            </tr>
+        </table>
+        <script>
+
+            function btn1() {
+                let urlString = window.location.href;
+                let paramString = urlString.split("?")[1];
+                let querystring = new URLSearchParams(paramString);
+                let p = [];
+
+                let i = 0;
+                for (let pair of querystring.entries()) {
+                    // alert(pair[0]);
+                    p[i] = pair[1];
+
+                    i = i + 1;
+                }
+                let a = p[0];
+                let b = p[1];
+                let c = p[2];
+                document.getElementById("t1").value = a;      
+                document.getElementById("t2").value = b;
+                document.getElementById("t3").value = c;
+                let d = document.getElementById("t4").value;
+                let e = document.getElementById("t5").value;
+                localStorage.setItem("a", a);
+                localStorage.setItem("b", b);
+                localStorage.setItem("c", c);
+                localStorage.setItem("d", d);
+                localStorage.setItem("e", e);
+            }
+    //         function viewme(){
+    // result.innerHTML =  localStorage.getItem("stuname") + localStorage.getItem("phoneNo") + localStorage.getItem("email") + localStorage.getItem("username") + localStorage.getItem("password"); 
+    // // result.innerHTML = localStorage.getItem("stuname");
+// }
+
+            function view(){
+                document.getElementById("t1").value = localStorage.getItem("a");
+                document.getElementById("t2").value = localStorage.getItem("b");
+                document.getElementById("t3").value = localStorage.getItem("c");
+                document.getElementById("t4").value = localStorage.getItem("d");
+                document.getElementById("t5").value = localStorage.getItem("e");
+                
+            }
+
+        </script>
+    </div>
+</body>
+
+</html>

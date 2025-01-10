@@ -1,0 +1,22 @@
+.main{
+    /* background-color: black; */
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.main-section{
+    background-color: black;
+}
+.main-button{
+    /* margin-left: 30%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+.main-btn{
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+

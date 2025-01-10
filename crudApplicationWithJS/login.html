@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .main{
+    /* background-color: black; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+.main-section{
+    /* background-color: rgb(136, 50, 50); */
+    background: rgba(0, 0, 0,0.7) url("https://images.unsplash.com/photo-1707464779415-8e511b9a2843?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 20%;
+    height: 300px;
+    position: relative;
+}
+.main-button{
+    /* margin-left: 30%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+.main-btn{
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+#main-button1,#main-button2{
+   color:  white;
+   background-color: rgb(180, 23, 23);
+   border: none;
+   font-size: 16px;
+}
+.main-heading { 
+    text-align: center;
+    font-size: 20px;
+    height: 50px;
+    align-content: center;
+}
+.login-save{
+    text-align: center;
+}
+#msg{
+    color: red;
+    background-color: black;
+    position: absolute;
+    top: -22px;
+    font-size: 21px;
+}
+    </style>
+
+    <script lang="javascript">
+    function loginSavebtn(){
+        let name = document.getElementById("t1").value;
+        let otp = document.getElementById("t2").value;
+        if(name!=0 && otp!=0){
+          if(name==localStorage.getItem("username") && otp==localStorage.getItem("password")){
+            window.open("studentresult.html")
+          }                                           
+          else{                                                                            
+            document.getElementById("msg").innerHTML = "Invalid Username and password"
+            document.getElementById("t1").focus()    
+        }                                                                                         
+    }                                                                 
+    else{                                                                                          
+        alert("Enter Username and password")                       
+        document.getElementById("t1").focus()                      
+        }                                          
+    }                                 
+                                                    
+    </script>                                  
+</head>                                                           
+<body>
+    <header><h1><b>Login</b></h1></header>
+    <nav class="nav">
+        <div class="nav-div" id="nav-div1"><a href="main.html">Home</a></div>
+        <div class="nav-div" id="nav-div2"><a href="registration.html">Registration</a></div>
+        <div class="nav-div" id="nav-div3"><a href="login.html">Login</a></div>
+    </nav>        
+    <main class="main">
+        <div class="main-section">
+            <div class="main-heading"><h2><b>Login</b></h2></div>   <br><br>
+            Enter UserName: <input type="text" id="t1"> <br><br>
+            Enter password:&nbsp;&nbsp; <input type="text" id="t2"> <br><br><br><br>
+            <div id="msg"></div>
+                <div class="login-save">
+                    <input type="button" value="submit" onclick="loginSavebtn()" style="font-size: 14px;">&nbsp;
+                    <input type="button" value="cancel" onclick="logincancelbtn()" style="font-size: 14px;">
+                </div>
+    </div>
+    </main>
+    <footer class="footer">
+        <marquee behavior="scroll" direction="right" style="font-size: 26px;"> 
+            This is a simple <mark>CRUD APPLICATION</mark> developed by Sheen Dutt.
+        </marquee>
+    </footer>
+                                        
+</body>
+</html>  
+ 
+ 
+     
+ 
+

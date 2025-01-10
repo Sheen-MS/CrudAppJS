@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="main.css">
+    <style>
+        .main{
+    /* background-color: black; */
+    color: white;
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    align-items: center;
+}
+.main-section{
+    /* background-color: rgb(136, 50, 50); */
+    background: rgba(0, 0, 0,0.7) url("https://images.unsplash.com/photo-1707464779415-8e511b9a2843?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGNhbXB1c3xlbnwwfHwwfHx8MA%3D%3D");
+    background-size: cover;
+    background-blend-mode: darken;
+    width: 30%;
+    height: 400px;
+    align-content: center;
+}
+.main-button{
+    /* margin-left: 30%; */
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+.main-btn{
+    width:40%;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: blue; */
+}
+#main-button1,#main-button2{
+   color:  white;
+   background-color: rgb(180, 23, 23);
+   border: none;
+   font-size: 16px;
+}
+.main-heading {
+    text-align: center;
+    font-size: 20px;
+}
+.main-input{
+    text-align: center;
+}
+
+    </style>
+</head>
+<body>
+    <header><h1><b>Student Registration</b></h1></header> 
+    <nav class="nav">
+        <div class="nav-div" id="nav-div1"><a href="main.html">Home</a></div>
+        <div class="nav-div" id="nav-div2"><a href="registration.html">Registration</a></div>
+        <div class="nav-div" id="nav-div3"><a href="login.html">Login</a></div>
+    </nav>
+    <main class="main">
+        <div class="main-section">
+            <div class="main-heading"><h2><b>Student Registration</b></h2></div>  <br><br>
+            <div class="main-input">
+                Enter StudentName: <input type="text" id="t1"><br><br>
+                Enter PhoneNo: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="text" id="t2"><br><br>
+                Enter Email: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   <input type="text" id="t3"><br><br>
+                Enter Username: &nbsp;&nbsp;&nbsp;&nbsp;   <input type="text" id="t4"><br><br>
+                Enter Password: &nbsp;&nbsp;&nbsp;&nbsp;   <input type="text" id="t5"><br><br>
+                <!-- Average <div id="main-average"></div><br>
+                Result <div id="main-result"></div><br><br> -->
+            
+                <div class="main-button">
+                    <div class="main-btn">
+                        <input type="button" id="main-button1" value="save" onclick="stuRegsave()">
+                        <input type="button" id="main-button1" value="btn" onclick="btn()">
+                        <input type="button" id="main-button2" value="Cancel" onclick="stuRegback()">
+                        <input type="button" id="main-button3" value="update" onclick="updt()">
+                    </div>
+                </div>
+
+                <div id="result"></div>
+            </div>
+            </div>
+           
+    </main>
+
+    <footer class="footer">
+        <marquee behavior="scroll" direction="right" style="font-size: 26px;"> 
+            This is a simple <mark>CRUD APPLICATION</mark> developed by Sheen Dutt.
+        </marquee>
+    </footer>
+ 
+
+    <script src="registration.js"></script>
+</body>
+</html>
